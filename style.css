@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s;
+}
+
+body {
+  background-color: #7ae868;
+  background-image: url("imagenes/fondoRM.png");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: 50% 130%;
+  margin: 0px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/*------------------------------------------------------HEADER PRINCIPAL---------------------------------------------------------------*/
+.header1 {
+  background-color: #7ae868;
+  border-color: #000000;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: static;
+}
+
+.logorm {
+  position: relative;
+  width: 90px;
+  height: 70px;
+  top: -0px;
+  bottom: 0;
+  right: 0px;
+  left: 600px;
+}
+
+/*------------------------------------------------------HEADER SECCIONES---------------------------------------------------------------*/
+
+.headerPrueba {
+  background-color: #030303;
+  color: #7AE868;
+  padding: 1rem 2rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.contenedorheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li {
+  display: inline-block;
+  padding: 0.5rem 2rem 0.5rem;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.navigation ul li:hover {
+  background: #79e86881;
+}
+
+.botonHeader {
+  background-color: transparent;
+  border: none;
+  color: #7AE868;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botonHeader:hover {
+  color: white;
+}
+
+.logorm2 {
+  width: 160px;
+  height: 80px;
+}
+
+/*----------------------------------------------------------ESTILO BOTONES -----------------------------------------------------------*/
+.botones {
+  position: relative;
+  bottom: -50px;
+  margin-bottom: 10px;
+}
+
+.botonGrande {
+  position: relative;
+  background-color: rgb(8, 8, 8);
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 20px;
+  margin: 1rem;
+  border-color: #2BCA04;
+  border-radius: 50px;
+  border-width: 0.2cm;
+  left: 120px;
+  bottom: 50px;
+  width: 200px;
+  top: -50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botonGrande:hover {
+  padding: 28px 28px;
+  background: #2cea1e;
+  color: rgb(10, 10, 10);
+}
+
+.botonGrande:active {
+  padding: 28px 28px;
+  background: #080808;
+  color: rgb(242, 239, 239);
+}
+
+.botonBuscar {
+  background-color: rgb(8, 8, 8);
+  color: #ffffff;
+  font-size: x-small;
+  padding: 10px;
+  margin: 1rem;
+  border-color: #2BCA04;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botonBuscar:hover {
+  padding: 15px 15px;
+  background: #2cea1e;
+  color: rgb(2, 2, 2);
+}
+
+.botonBuscar:active {
+  padding: 15px 15px;
+  background: #030303;
+  color: rgb(249, 245, 245);
+}
+
+#botonesmultiverso {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: red;
+}
+
+.botonorigen {
+  position: relative;
+  background-color: rgb(8, 8, 8);
+  color: #1EB9EA;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 50px;
+}
+
+.botonorigen:hover {
+  padding: 5px 12px;
+  background: #064f65;
+  color: rgb(0, 0, 0);
+}
+
+.botonorigen:active {
+  padding: 5px 12px;
+  background: #0E7595;
+  color: rgb(0, 0, 0);
+}
+
+/*--------------------------------------------------------------ESTILO DE TARJETAS-----------------------------------------------------*/
+
+#personajes {
+  /*contendor de las tarjetas*/
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.tarjetaP {
+  /* fondo tarjetas*/
+  background-color: #00000063;
+  width: 300px;
+  height: 400px;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  border-radius: 20px;
+  perspective: 1000px;
+}
+
+.tarjetaP:hover .cardCompleta { /*sirve para que den vuelta*/
+  transform: rotateY(180deg);
+}
+
+.cardCompleta { /*sirve para que den vuelta*/
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1000ms;
+}
+
+.tarjetaFrente { /*sirve para que den vuelta*/
+  background-size: cover;
+  background-position: center;
+}
+
+.tarjetaFrente,
+.tarjetaAtras { /*sirve para que den vuelta*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.tarjetaAtras { /*sirve para que den vuelta*/
+  transform: rotateY(180deg);
+  background: #000000;
+}
+
+.imagenTarjeta { 
+  width: 250px;
+  height: 350px;
+  margin: 0px 0px 0px 0px;
+  border-radius: 20px;
+}
+ 
+.bg { /*sirve para que den vuelta*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.body_tarjetaFrente { /*sirve para que den vuelta*/
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transform: translateZ(60px);
+  flex-direction: column;
+}
+
+.body_tarjetaAtras { /*sirve para que den vuelta*/
+  padding: 40px;
+  text-align: center;
+  transform: translateZ(60px);
+}
+
+.titulotarjetas {
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.textoTarjeta {
+  margin: 30px 0px 0px 10px;
+  font-weight: 0;
+  align-items: center;
+  font-size: 20px;
+}
+
+.titulotarjetasEpisodios {
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.textotarjetaepisodios {
+  text-align: center;
+  margin: 120px 0px 0px 10px;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+
+/*-------------------------------------------------------- SECCIÓN 1: PORTADA-----------------------------------------------------------*/
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  height: calc(100vh - 3rem);
+}
+
+.imagenP1rm {
+  /*Estilo imagen principal (IZQUIERDA)*/
+  display: flex;
+  position: relative;
+  margin: 0px 100px 0px 0px;
+}
+
+.portadarm {
+  width: 530px;
+  height: 630px;
+}
+
+.infoportada {
+  /*Columna DERECHA*/
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+
+.imagenP2rm {
+  /*Estilo para imagen nombre*/
+  position: relative;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.nombrerm {
+  width: 700px;
+  height: 250px;
+}
+
+.buscador {
+  position: relative;
+  color: rgb(254, 254, 255);
+  text-align: center;
+}
+
+.buscaP {
+  letter-spacing: 2.5px;
+  margin: 0 100px 0 0px;
+}
+
+input {
+  border: 2px solid #000000;
+  font-size: 12px;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.frase {
+  color: #7AE868;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 20px;
+}
+
+/*----------------------------------------------------- SECCIÓN 2: PERSONAJES-----------------------------------------------------------*/
+
+.seccion2 {
+  display: flex;
+  position: relative;
+  background-color: #7AE868;
+}
+
+.tituloPersonajes {
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.selector1 {
+  border: 2px solid #000000;
+  font-size: 12px;
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+.buscador2 {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.resultado {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/*-----------------------------------------------------SECCIÓN 3: MULTIVERSOS-----------------------------------------------------------*/
+
+.seccion3 {
+  display: flex;
+  position: relative;
+}
+
+.multiversos {
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#personajesMulti {
+  /*contendor de las tarjetas*/
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/*----------------------------------------------------------------CARRUSEL---------------------------------------------------------------*/
+.carrusel {
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carrusel .grande {
+  width: 400%;
+  flex-flow: row nowrap;
+  align-items: center;
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+
+.carrusel input {
+  width: 180px;
+  height: 280px;
+  border-radius:30px;
+  margin: 10px;
+}
+
+.carrusel input:hover {
+  width: 210px;
+  height: 310px;
+  box-shadow: 0 0 4px 1em #00000052;
+}
+
+.carrusel .puntos {
+  width: 100%;
+  padding: .4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.carrusel .punto {
+  width: 2em;
+  height: 2em;
+  background-color: rgba(0, 0, 0, 0.441);
+  margin: 1em 1em 0;
+  border-radius: 30px;
+}
+
+.carrusel .punto.activo {
+  background-color: rgb(0, 0, 0);
+}
+
+
+/*-------------------------------------------------------SECCIÓN 4: EPISODIOS-----------------------------------------------------------*/
+#seccion4 {
+  display: flex;
+  position: relative;
+}
+
+.episodios {
+  position: relative;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+#tarjetasEpisodios {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/*-------------------------------------------------------FOOTER-----------------------------------------------------------*/
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
